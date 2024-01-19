@@ -6,4 +6,9 @@ WORKDIR /
 COPY package*.json ./
 RUN npm install
 COPY . .  
-CMD [ "node", "build" ]
+         
+# 容器对外暴露的端口号
+EXPOSE 8889
+
+CMD npm start 
+
